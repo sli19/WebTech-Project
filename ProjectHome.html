@@ -7,14 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ProjectHome</title>
     <style>
-                body {
+        body {
             text-align: left;
             margin-left: 50px;
             margin-right: 50px;
+            margin-top: 40px;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: white;
         }
+
         th.leftcolumn {
             width: 15%;
             padding: 0;
+            vertical-align: top;
         }
 
         img#coverphoto {
@@ -24,15 +29,15 @@
         }
 
         th.menu {
-            height: 80%;
-            vertical-align: text-top;
+            height: 90%;
+            vertical-align: top;
         }
 
         ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
-            width: 300px;
+            width: 200px;
             background: white;
             font-size: 23px;
         }
@@ -46,6 +51,12 @@
 
         li a:hover {
             background-color: lightgray;
+            width: 70%
+        }
+
+        .app {
+            width: 25px;
+            float: left;
         }
     </style>
 </head>
@@ -54,9 +65,9 @@
     <table>
         <tr>
             <th class="leftcolumn">
-                <h1> Shanshan Li </h1>
+                <h1> Shanshan Li. </h1>
             </th>
-            <th rowspan="3">
+            <th rowspan="2">
                 <img id="coverphoto" src="images/cover.jpg" alt="coverphoto">
             </th>
         </tr>
@@ -67,17 +78,16 @@
                     <li> <a href="ProjectBlog.html"> Blog </a> </li>
                     <li> <a href="ProjectPortfolio.html"> Portfolio </a> </li>
                     <li> <a href="ProjectContact.html"> About + Contact </a> </li>
-                    <li>
-                        Social Media icons
+                    <li id="socialmedia"> <br>
+                        <a class="app" href="https://www.instagram.com/shanshan_li23/"> <img class="app"
+                                src="images/instagram.png" alt="Insta"></a>
+                        <a class="app" href="https://www.linkedin.com/in/shanshanli98/"> <img class="app"
+                                src="images/linkedin.png" alt="linkedin"></a>
                     </li>
                 </ul>
             </th>
         </tr>
-        <tr>
-            <th>
 
-            </th>
-        </tr>
     </table>
 
 

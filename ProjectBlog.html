@@ -11,10 +11,15 @@
             text-align: left;
             margin-left: 50px;
             margin-right: 50px;
+            margin-top: 40px;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: white;
         }
+
         th.leftcolumn {
             width: 15%;
             padding: 0;
+            vertical-align: top;
         }
 
         img {
@@ -24,15 +29,15 @@
         }
 
         th.menu {
-            height: 80%;
-            vertical-align: text-top;
+            height: 90%;
+            vertical-align: top;
         }
 
         ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
-            width: 300px;
+            width: 200px;
             background: white;
             font-size: 23px;
         }
@@ -46,14 +51,44 @@
 
         li a:hover {
             background-color: lightgray;
+            width: 70%;
         }
-        table.blogsection{
+
+        .app {
+            width: 25px;
+            float: left;
+        }
+
+        table.blogsection {
             padding-left: 302px;
             width: 100%;
         }
-        th.blogpost{
+
+        .title {
+            position: relative;
             width: 33.33%;
             text-align: center;
+            vertical-align: middle;
+        }
+
+        .bimages {
+            /* display: block; */
+            object-fit: cover;
+        }
+
+        .blogtitle {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: 0.5s ease;
+            background: lightgray;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .title:hover .blogtitle {
+            opacity: 1;
         }
     </style>
 </head>
@@ -62,10 +97,10 @@
     <table>
         <tr>
             <th class="leftcolumn">
-                <h1> Shanshan Li </h1>
+                <h1> Shanshan Li. </h1>
             </th>
-            <th rowspan="2" colspan="3">
-                <img id="coverphoto" src="Images/Sevilleriver1.jpg" alt="coverphoto">
+            <th rowspan="2">
+                <img id="coverphoto" src="images/Sevilleriver1.jpg" alt="coverphoto">
             </th>
         </tr>
         <tr>
@@ -75,8 +110,11 @@
                     <li> <a href="ProjectBlog.html"> Blog </a> </li>
                     <li> <a href="ProjectPortfolio.html"> Portfolio </a> </li>
                     <li> <a href="ProjectContact.html"> About + Contact </a> </li>
-                    <li>
-                        Social Media icons
+                    <li id="socialmedia"> <br>
+                        <a class="app" href="https://www.instagram.com/shanshan_li23/"> <img class="app"
+                                src="images/instagram.png" alt="Insta"></a>
+                        <a class="app" href="https://www.linkedin.com/in/shanshanli98/"> <img class="app"
+                                src="images/linkedin.png" alt="linkedin"></a>
                     </li>
                 </ul>
             </th>
@@ -84,17 +122,27 @@
     </table>
     <br><br>
     <table class="blogsection">
-        <tr>
+        <!-- <tr>
             <th class="blogpost">
                 China
             </th>
             <th class="blogpost"> Canada </th>
             <th class="blogpost"> Spain </th>
-        </tr>
+        </tr> -->
         <tr>
-            <th> <img src="" alt="China"></th>
-            <th> <img src="images/Toronto.jpg" alt="Toronto"></th>
-            <th> <img src="images/lassetas.jpg" alt="SevilleSetas"></th>
+            <th class="title">
+                <p class="blogtitle">Toronto</p>
+                <img class="bimages" src="images/Toronto.jpg" alt="Toronto">
+            </th>
+            <th class="title">
+                <p class="blogtitle">Boston</p>
+                <img class="bimages" src="" alt="">
+            </th>
+
+            <th class="title">
+                <p class="blogtitle">Seville</p>
+                <img class="bimages" src="images/lassetas.jpg" alt="SevilleSetas">
+            </th>
         </tr>
     </table>
 

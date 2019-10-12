@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About&Contact</title>
+
+    <link rel="stylesheet" href="Home.css" type="text/css">
+    <style>
+        /* .split{
+            height: 100%;
+            width: 50%;
+            z-index: 1;
+            
+            overflow-x: hidden;
+            padding-top: 20px;
+        } */
+        /* .left {
+            left: 0;
+        }
+        .right{
+            right: 0;
+        } */
+
+
+        .table {
+            text-align: left;
+            margin: 0 auto;
+            font: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="headerul">
+                <li class="headerli"><img src="images/logo.png" alt="logo" height="60"></li>
+                <li class="headerli"><img src="Images/Name.png" alt="Shanshan Li" height="20"></li>
+                <li class="headerli"> <a href="index.htm"> Home </a></li>
+                <li class="headerli"> <a href="ProjectBlog.html"> Blog </a></li>
+                <li class="headerli"> <a href="ProjectPortfolio.html"> Portfolio </a></li>
+                <li class="headerli"> <a href="ProjectContact.html"> About + Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- <div class="splitleft">
+        <div>
+            <img src="images/me.png" alt="me" height="200px">
+        </div>
+    </div>
+
+    <div class="splitright">
+        <div class="centered">
+            <h3> About Me</h3>
+            <p>
+                A paragraph about me here ***
+            </p>
+        </div>
+    </div> -->
+
+    <p>4 photo virtical collage grid thing</p>
+    <hr>
+    <article>
+        <h3> Let's Connect. </h3>
+    </article>
+    <form action="mailto:sli19@babson.edu" method="POST" enctype="text/plain">
+        <table class="table">
+            <tr>
+                <th>
+                    First Name <br>
+                    <input type="text" name="Firstname" size="40" required>
+                </th>
+                <th>
+                    Last Name <br>
+                    <input type="text" name="Lastname" size="40" required>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    Your Email <br>
+                    <input type="text" name="Email" size="90" required>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    Subject <br>
+                    <input type="text" name="Subject" size="100%" required>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    Message <br>
+                    <textarea name="Comment" id="Comment" cols="90" rows="10"></textarea>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <input type="submit" value="send">
+                </th>
+            </tr>
+        </table>
+    </form>
+
+
+    <footer class="footer">
+
+    </footer>
+</body>
+
+</html>

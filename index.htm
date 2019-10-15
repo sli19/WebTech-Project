@@ -61,20 +61,29 @@
     <link rel="stylesheet" href="Home.css" type="text/css" />
 
     <style>
-        .map {
-            width: 900px;
+        .intro {
+            padding: 0 200px;
+        }
+
+        audio {
+            position: fixed;
+            top: 0;
+            right: 0;
         }
     </style>
 </head>
 
 <body>
+    <audio controls>
+        <source src="images/Firestone.mp3" type="audio/mpeg">
+    </audio>
     <header>
         <nav>
             <ul class="headerul">
-                <li class="headerli"><img src="images/logo.png" alt="logo" height="60"></li>
-                <li class="headerli"><img src="Images/Name.png" alt="Shanshan Li" height="20"></li>
+                <li class="headerli"><img src="images/logo.png" alt="logo" height="60" title="logo"></li>
+                <li class="headerli"><img src="Images/Name.png" alt="Shanshan Li" height="20" title="name"></li>
                 <li class="headerli"> <a href="index.htm"> Home </a></li>
-                <li class="headerli"> <a href="ProjectBlog.html"> Blog </a></li>
+                <li class="headerli"> <a href="ProjectBlog.html"> Blogs </a></li>
                 <li class="headerli"> <a href="ProjectPortfolio.html"> Portfolio </a></li>
                 <li class="headerli"> <a href="ProjectContact.html"> About + Contact</a></li>
             </ul>
@@ -87,30 +96,35 @@
 
     <article>
         <h3> ~ Welcome to Wildblueberry33 ~ </h3>
-        <p> Follow my journey around our beautiful planet.
-            I hope you will enjoy your stay. :) </p>
+        <p class="intro">
+            Follow my journey around our beautiful planet. <br>
+            Each <a href="ProjectBlog.html">blog</a> is a plathera of thoughts and images from places I once called "Home" for an extended period of
+            time. <br>
+            Check out my <a href="ProjectPortfolio.html"> Portfolio </a> for artworks from my travels. <br>
+            Click around! I hope you will enjoy your stay. :)
+        </p>
     </article>
     <br>
     <article>
-        <img class="map" src="images/worldmap.png" alt="map">
+        <img class="map" src="images/worldmap.png" alt="map" title="worldmap" usemap="#worldmap" height="400px">
+        <map name="worldmap">
+            <area shape="rect" coords="246, 105, 275, 160 " href="Blog_Toronto.html" alt="Toronto">
+            <area shape="rect" coords="230, 170, 279, 219" href="Blog_Boston.html" alt="Boston">
+            <area shape="rect" coords="528, 166, 561, 195" href="Blog_Seville.html" alt="Seville">
+            <area shape="rect" coords="986, 184, 1067, 249" href="Blog_Shanghai.html" alt="Shanghai">
+        </map>
     </article>
     <div>
 
     </div>
 
     <footer>
-        <div class="socialmedia">
-            <a href="#insta"> <img src="images/instagram.png" alt="instagram" height="30"></a>
-        <!-- </div>
-        <div class="socialmedia"> -->
-            <a href="#Linkedin"> <img src="images/linkedin.png" alt="linkedin" height="30"></a>
-        </div>
-        <br>
         <div class="footernavbar">
-            <a href="index.htm"> Home </a>
+            <a href="index.htm"> Home. </a>
             <a href="ProjectBlog.html">Blog.</a>
             <a href="ProjectPortfolio.html"> Portfolio. </a>
             <a href="ProjectContact.html"> About + Contact.</a>
+            <a href="Sitemap.html"> Site Map.</a>
         </div>
     </footer>
 </body>

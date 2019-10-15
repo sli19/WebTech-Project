@@ -10,7 +10,39 @@
     <link rel="stylesheet" href="Home.css" type="text/css">
 
     <style>
+        .sectionbackground {
+            height: 100px;
+            width: 100%;
+            background-color: lightgray;
+            display: inline-block;
+        }
 
+        .gallery {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            display: inline-block;
+            text-align: center;
+            /* justify-content: center;
+            align-content: center; */
+        }
+
+        .imagecontainer {
+            width: 30%;
+            float: left;
+            margin: 20px;
+        }
+
+        .image {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .subtitle {
+            font-size: 30px;
+            font-style: italic;
+        }
     </style>
 </head>
 
@@ -21,23 +53,146 @@
                 <li class="headerli"><img src="images/logo.png" alt="logo" height="60"></li>
                 <li class="headerli"><img src="Images/Name.png" alt="Shanshan Li" height="20"></li>
                 <li class="headerli"> <a href="index.htm"> Home </a></li>
-                <li class="headerli"> <a href="ProjectBlog.html"> Blog </a></li>
+                <li class="headerli"> <a href="ProjectBlog.html"> Blogs </a></li>
                 <li class="headerli"> <a href="ProjectPortfolio.html"> Portfolio </a></li>
                 <li class="headerli"> <a href="ProjectContact.html"> About + Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <article>
-        <img src="images/nice.jpg" alt="cover">
-    </article>
-    <p>
-        Pencil Sketches.
-        Acrylic.
-        Watercolor.
-        SketchBook.
-        Other.
-    </p>
+
+    <div class="sectionbackground">
+        <!-- find a header photo -->
+        <ul class="sectionbackground">
+            <li> Pencil Sketches. </li>
+            <li> Acrylic. </li>
+            <li> Watercolour. </li>
+            <li> SketchBook. </li>
+            <li> Other. </li>
+
+        </ul>
+    </div>
+
+    <div class="gallery">
+        <h3 id="Sketches"> Pencil Sketches. </h3>
+        <div class="imagecontainer">
+            <div class="image">
+                <img src="../WebTech-Project/Images/Drawings/nynature.jpg" alt="nynature" title="Nature">
+            </div>
+            <div>
+                <p>United States.</p>
+            </div>
+        </div>
+        <div class="imagecontainer">
+            <div class="image">
+                <img src="../WebTech-Project/Images/Drawings/wuzhen.jpg" alt="wuzhen" title="wuzhen">
+            </div>
+            <div>
+                <p>WuZhen, China.</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="gallery">
+        <div class="imagecontainer">
+            <div class="image">
+                <img src="../WebTech-Project/Images/Drawings/norwayscenic.jpg" alt="norwayscenic" title="Norway">
+            </div>
+            <div>
+                <p>Norway.</p>
+            </div>
+        </div>
+        <div class="imagecontainer">
+            <div class="image">
+                <img src="../WebTech-Project/Images/Drawings/heidelberg.jpg" alt="heidelberg" title="heidelberg castle">
+            </div>
+            <div>
+                <p>Heidelberg Castle, Germany</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery">
+        <h3 id="Sketchbook"> SketchBook (virtual) </h3>
+        <div class="imagecontainer">
+            <div class="image">
+                <img src="../WebTech-Project/Images/Virtual Art/Nice Sunset.jpg" alt="Nice" title="Nice">
+            </div>
+            <div>
+                <p>Nice, France</p>
+            </div>
+        </div>
+        <div class="imagecontainer">
+            <div class="image">
+                <img src="../WebTech-Project/Images/Virtual Art/Toronto Sunset.jpg" alt="Toronto" title="Toronto">
+            </div>
+            <div>
+                <p>Toronto, Canada</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery">
+        <h3 id="Acrylic"> Acrylic Miniature Collection </h3>
+        <div class="imagecontainer">
+            <div class="image">
+                <img src="../WebTech-Project/Images/Acrylic/norwaystream.png" alt="norwaystream" title="Norway"
+                    height="200">
+            </div>
+        </div>
+        <div class="imagecontainer">
+            <div class="image">
+                <img src="../WebTech-Project/Images/Acrylic/Feria.png" alt="Feria" title="SevilleFeria" height="200">
+            </div>
+        </div>
+        <div class="imagecontainer">
+            <div class="image">
+                <img src="../WebTech-Project/Images/Acrylic/Denmark.png" alt="Denmark" title="Denmark" height="200">
+            </div>
+        </div>
+        <div class="imagecontainer">
+            <div class="image">
+                <img src="../WebTech-Project/Images/Acrylic/korea.png" alt="korea" title="Korea" height="200">
+            </div>
+        </div>
+        <div class="imagecontainer">
+            <div class="image">
+                <img src="../WebTech-Project/Images/Acrylic/lagosbeach.png" alt="lagosbeach" title="lagosbeach"
+                    height="200">
+            </div>
+        </div>
+        <div class="imagecontainer">
+            <div class="image">
+                <img src="../WebTech-Project/Images/Acrylic/park.png" alt="park" title="MadridPark" height="200">
+            </div>
+        </div>
+    </div>
+    <div class="gallery">
+        <h3 id="watercolor"> Watercolour </h3>
+        <div class="imagecontainer">
+            <div>
+
+            </div>
+        </div>
+    </div>
+    <div class="gallery">
+        <h3 id="other"> Other </h3>
+        <div class="imagecontainer">
+            <div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footernavbar">
+            <a href="index.htm"> Home. </a>
+            <a href="ProjectBlog.html">Blog.</a>
+            <a href="ProjectPortfolio.html"> Portfolio. </a>
+            <a href="ProjectContact.html"> About + Contact.</a>
+            <a href="Sitemap.html"> Site Map.</a>
+        </div>
+    </footer>
 </body>
 
 </html>

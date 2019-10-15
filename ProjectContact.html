@@ -30,6 +30,33 @@
             margin: 0 auto;
             font: 14px;
         }
+
+        .split {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            display: inline-block;
+            /* justify-content: center;
+            align-content: center; */
+        }
+
+        .container {
+            width: 40%;
+            float: left;
+            margin: 20px;
+        }
+
+        .aboutme {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            line-height: 2;
+        }
+
+        .applogo {
+            width: 100px;
+            display: inline-flex;
+        }
     </style>
 </head>
 
@@ -40,32 +67,45 @@
                 <li class="headerli"><img src="images/logo.png" alt="logo" height="60"></li>
                 <li class="headerli"><img src="Images/Name.png" alt="Shanshan Li" height="20"></li>
                 <li class="headerli"> <a href="index.htm"> Home </a></li>
-                <li class="headerli"> <a href="ProjectBlog.html"> Blog </a></li>
+                <li class="headerli"> <a href="ProjectBlog.html"> Blogs </a></li>
                 <li class="headerli"> <a href="ProjectPortfolio.html"> Portfolio </a></li>
                 <li class="headerli"> <a href="ProjectContact.html"> About + Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- <div class="splitleft">
-        <div>
-            <img src="images/me.png" alt="me" height="200px">
+    <div class="split">
+        <div class="container">
+            <div class="aboutme">
+                <img src="images/me.png" alt="me" height="400px">
+            </div>
+        </div>
+        <div class="container">
+            <div class="aboutme">
+                <h3 id="about"> About Me</h3>
+                <p>
+                    Hello! My name is Shanshan. I am in my final semester at Babson College getting my bachelor's degree
+                    in Business Administrations and Management. <br>
+                    Over the last few decades, I've had the opportunity to do quite a lot of traveling and have lived in
+                    three different continents so far. On this site, I would like to share with you some of my
+                    experiences and artworks I've completed. <br>
+
+                    Check out my Social Media: <br>
+                    <div class="applogo">
+                        <a href="https://www.instagram.com/shanshan_li23/"><img src="images/instagram.png"
+                                alt="instagram" title="Instalogo" height="30px"></a>
+                        <a href="https://www.linkedin.com/in/shanshanli98/"><img src="images/linkedin.png"
+                                alt="linkedin" title="linkedinlogo" height="30px"></a>
+                    </div>
+                </p>
+            </div>
         </div>
     </div>
 
-    <div class="splitright">
-        <div class="centered">
-            <h3> About Me</h3>
-            <p>
-                A paragraph about me here ***
-            </p>
-        </div>
-    </div> -->
 
-    <p>4 photo virtical collage grid thing</p>
     <hr>
     <article>
-        <h3> Let's Connect. </h3>
+        <h3 id="contact"> Let's Connect. </h3>
     </article>
     <form action="mailto:sli19@babson.edu" method="POST" enctype="text/plain">
         <table class="table">
@@ -106,8 +146,14 @@
     </form>
 
 
-    <footer class="footer">
-
+    <footer>
+        <div class="footernavbar">
+            <a href="index.htm"> Home. </a>
+            <a href="ProjectBlog.html">Blog.</a>
+            <a href="ProjectPortfolio.html"> Portfolio. </a>
+            <a href="ProjectContact.html"> About + Contact.</a>
+            <a href="Sitemap.html"> Site Map.</a>
+        </div>
     </footer>
 </body>
 

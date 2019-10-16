@@ -72,15 +72,22 @@
             top: 0;
             right: 0;
         }
+
+        .map {
+            margin: 0, auto;
+            width: auto;
+        }
     </style>
 </head>
 
 <body>
     <audio controls>
+        <!-- Kygo-Firestone(Official Audio) ft. Conrad Sewell from YouTube -->
         <source src="images/Firestone.mp3" type="audio/mpeg">
     </audio>
     <header>
         <nav>
+            <!-- The logo is my design -->
             <ul class="headerul">
                 <li class="headerli"><img src="images/logo.png" alt="logo" height="60" title="logo"></li>
                 <li class="headerli"><img src="Images/Name.png" alt="Shanshan Li" height="20" title="name"></li>
@@ -93,6 +100,7 @@
     </header>
 
     <article>
+        <!-- This is my photo -->
         <img src="images/nice.jpg" alt="cover">
     </article>
 
@@ -100,22 +108,27 @@
         <h3> ~ Welcome to Wildblueberry33 ~ </h3>
         <p class="intro">
             Follow my journey around our beautiful planet. <br>
-            Each <a href="ProjectBlog.html">blog</a> is a plathera of thoughts and images from places I once called "Home" for an extended period of
+            Each <a href="ProjectBlog.html">blog</a> is a plathera of thoughts and images from places I once called
+            "Home" for an extended period of
             time. <br>
             Check out my <a href="ProjectPortfolio.html"> Portfolio </a> for artworks from my travels. <br>
             Click around! I hope you will enjoy your stay. :)
         </p>
     </article>
     <br>
-    <article>
-        <img class="map" src="images/worldmap.png" alt="map" title="worldmap" usemap="#worldmap" height="400px">
-        <map name="worldmap">
-            <area shape="rect" coords="246, 105, 275, 160 " href="Blog_Toronto.html" alt="Toronto">
-            <area shape="rect" coords="230, 170, 279, 219" href="Blog_Boston.html" alt="Boston">
-            <area shape="rect" coords="528, 166, 561, 195" href="Blog_Seville.html" alt="Seville">
-            <area shape="rect" coords="986, 184, 1067, 249" href="Blog_Shanghai.html" alt="Shanghai">
-        </map>
-    </article>
+
+    <!-- website for map: https://upload.wikimedia.org/wikipedia/en/9/99/BlankMap-World-Continents-Coloured.png -->
+    <img class="map" src="images/worldmap.png" alt="map" title="worldmap" usemap="#worldmap" height="400px"
+        width="900px">
+    <map name="worldmap">
+        <area shape="rect" coords="23px, 16px, 200px, 100px," href="Blog_Toronto.html" alt="Toronto" target="_blank">
+        <area shape="rect" coords="23px, 100px, 200px, 140px," href="Blog_Boston.html" alt="Boston" target="_blank">
+        <area shape="rect" coords="300px, 80px, 350px, 120px," href="Blog_Seville.html" alt="Seville" target="_blank">
+        <area shape="rect" coords="500px, 80px, 700px, 160px," href="Blog_Shanghai.html" alt="Shanghai" target="_blank">
+    </map>
+    <p>*Clickable map. Click on Canada, USA, Spain, or China to go to blog.*</p>
+
+
     <div>
 
     </div>

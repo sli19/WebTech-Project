@@ -1,199 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Portfolio</title>
 
-    <link rel="stylesheet" href="Home.css" type="text/css">
+    <link rel="stylesheet" href="Home.css" type="text/css" />
 
     <style>
-        .sectionbackground {
-            height: 100px;
-            width: 100%;
-            background-color: lightgray;
-            display: inline-block;
-        }
+      .sectionbackground {
+        height: 100px;
+        width: 100%;
+        background-color: lightgray;
+        display: inline-block;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .row {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 500px;
+      }
+      .row,
+      .row > .column {
+        padding: 8px;
+      }
+      .column {
+        justify-content: space-between;
+        display: inline-block;
+        width: 40%;
+      }
+      .row-2 {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 400px;
+      }
+      .row-2,
+      .row-2 > .column-2 {
+        padding: 8px;
+      }
+      .column-2 {
+        justify-content: space-between;
+        display: inline-block;
+        width: 25%;
+      }
 
-        .gallery {
-            padding: 0;
-            margin: 0;
-            width: 100%;
-            display: inline-block;
-            text-align: center;
-            /* justify-content: center;
-            align-content: center; */
-        }
-
-        .imagecontainer {
-            width: 30%;
-            float: left;
-            margin: 20px;
-        }
-
-        .image {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-        }
-
-        .subtitle {
-            font-size: 30px;
-            font-style: italic;
-        }
+      .content {
+        background-color: rgb(169, 222, 249);
+        padding: 10px;
+      }
     </style>
-</head>
-<!-- All images on this page are mine -->
-<body>
+  </head>
+  <!-- All images on this page are mine -->
+  <body>
     <header>
-        <nav>
-            <!-- The logo is my design -->
-            <ul class="headerul">
-                <li class="headerli"><img src="Images/logo.png" alt="logo" height="60" title="logo"></li>
-                <li class="headerli"><img src="Images/Name.png" alt="Shanshan Li" height="20" title="name"></li>
-                <li class="headerli"> <a href="index.htm" target="_blank"> Home </a></li>
-                <li class="headerli"> <a href="ProjectBlog.html" target="_blank"> Blogs </a></li>
-                <li class="headerli"> <a href="ProjectPortfolio.html" target="_blank"> Portfolio </a></li>
-                <li class="headerli"> <a href="ProjectContact.html" target="_blank"> About + Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-
-    <div class="sectionbackground">
-        <!-- find a header photo -->
-        <ul class="sectionbackground">
-            <li> Pencil Sketches. </li>
-            <li> Acrylic. </li>
-            <li> Watercolour. </li>
-            <li> SketchBook. </li>
-            <li> Other. </li>
-
+      <nav>
+        <!-- The logo is my design -->
+        <ul class="headerul">
+          <li class="headerli">
+            <img src="Images/logo.png" alt="logo" height="60" title="logo" />
+          </li>
+          <li class="headerli">
+            <img
+              src="Images/Name.png"
+              alt="Shanshan Li"
+              height="20"
+              title="name"
+            />
+          </li>
+          <li class="headerli">
+            <a href="index.htm" target="_blank"> Home </a>
+          </li>
+          <li class="headerli">
+            <a href="ProjectBlog.html" target="_blank"> Blogs </a>
+          </li>
+          <li class="headerli">
+            <a href="ProjectPortfolio.html" target="_blank"> Portfolio </a>
+          </li>
+          <li class="headerli">
+            <a href="ProjectContact.html" target="_blank"> About + Contact</a>
+          </li>
         </ul>
+      </nav>
+    </header>
+    <!-- <div class="sectionbackground">
+      find a header photo
+      <ul class="sectionbackground">
+        <li>Pencil Sketches.</li>
+        <li>Acrylic.</li>
+        <li>Watercolour.</li>
+        <li>SketchBook.</li>
+        <li>Other.</li>
+      </ul>
+    </div> -->
+    
+    <h3 class="subheading">Pencil Sketches</h3>
+    <p>Drawing the world in every shade of grey</p>
+    <br />
+    <div class="row">
+      <div class="column">
+        <div class="content">
+          <img
+            src="Images/Drawings/nynature.jpg"
+            alt="nynature"
+            title="Nature"
+            height="350px"
+          />
+          <h4>United States</h4>
+          <p>drawing information...</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img
+            src="Images/Drawings/wuzhen.jpg"
+            alt="wuzhen"
+            title="wuzhen"
+            height="350px"
+          />
+          <h4>WuZhen, China</h4>
+          <p>drawing information...</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="content">
+          <img
+            src="Images/Drawings/norwayscenic.jpg"
+            alt="norwayscenic"
+            title="Norway"
+            height="350px"
+          />
+          <h4>Norway</h4>
+          <p>drawing information...</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img
+            src="Images/Drawings/heidelberg.jpg"
+            alt="heidelberg"
+            title="heidelberg castle"
+            height="350px"
+          />
+          <h4>Heidelberg Castle, Germany</h4>
+          <p>drawing information...</p>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <h3 class="subheading">SketchBook (virtual)</h3>
+    <p>Virtual artworks done on SketchBook</p>
+    <br />
+    <div class="row">
+      <div class="column">
+        <div class="content">
+          <img
+            src="Images/Virtual Art/Nice Sunset.jpg"
+            alt="Nice"
+            title="Nice"
+            height="350px"
+          />
+          <h4>Nice, France</h4>
+          <p>drawing information...</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img
+            src="Images/Virtual Art/Toronto Sunset.jpg"
+            alt="Toronto"
+            title="Toronto"
+            height="350px"
+          />
+          <h4>Toronto, Canada</h4>
+          <p>drawing information...</p>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <h3 class="subheading">Acrylic Miniature Collection</h3>
+    <p>Small acrylic paintings for a wall collage project</p>
+    <br />
+    <div class="row-2">
+      <div class="column-2">
+        <div class="content">
+          <img
+            src="Images/Acrylic/norwaystream.png"
+            alt="norwaystream"
+            title="Norway"
+            height="200"
+          />
+          <h4>Norway</h4>
+        </div>
+      </div>
+      <div class="column-2">
+        <div class="content">
+          <img
+            src="Images/Acrylic/Feria.png"
+            alt="Feria"
+            title="SevilleFeria"
+            height="200"
+          />
+          <h4>Feria</h4>
+        </div>
+      </div>
+      <div class="column-2">
+        <div class="content">
+          <img
+            src="Images/Acrylic/Denmark.png"
+            alt="Denmark"
+            title="Denmark"
+            height="200"
+          />
+          <h4>Feria</h4>
+        </div>
+      </div>
     </div>
 
-    <div class="gallery">
-        <h3 id="Sketches"> Pencil Sketches. </h3>
-        <div class="imagecontainer">
-            <div class="image">
-                <img src="Images/Drawings/nynature.jpg" alt="nynature" title="Nature">
-            </div>
-            <div>
-                <p>United States.</p>
-            </div>
+    <div class="row-2">
+      <div class="column-2">
+        <div class="content">
+          <img
+            src="Images/Acrylic/korea.png"
+            alt="korea"
+            title="Korea"
+            height="200"
+          />
+          <h4>Feria</h4>
         </div>
-        <div class="imagecontainer">
-            <div class="image">
-                <img src="Images/Drawings/wuzhen.jpg" alt="wuzhen" title="wuzhen">
-            </div>
-            <div>
-                <p>WuZhen, China.</p>
-            </div>
+      </div>
+      <div class="column-2">
+        <div class="content">
+          <img
+            src="Images/Acrylic/lagosbeach.png"
+            alt="lagosbeach"
+            title="lagosbeach"
+            height="200"
+          />
+          <h4>Feria</h4>
         </div>
-
-    </div>
-    <div class="gallery">
-        <div class="imagecontainer">
-            <div class="image">
-                <img src="Images/Drawings/norwayscenic.jpg" alt="norwayscenic" title="Norway">
-            </div>
-            <div>
-                <p>Norway.</p>
-            </div>
+      </div>
+      <div class="column-2">
+        <div class="content">
+          <img
+            src="Images/Acrylic/park.png"
+            alt="park"
+            title="MadridPark"
+            height="200"
+          />
+          <h4>Feria</h4>
         </div>
-        <div class="imagecontainer">
-            <div class="image">
-                <img src="Images/Drawings/heidelberg.jpg" alt="heidelberg" title="heidelberg castle">
-            </div>
-            <div>
-                <p>Heidelberg Castle, Germany</p>
-            </div>
-        </div>
+      </div>
     </div>
 
-    <div class="gallery">
-        <h3 id="Sketchbook"> SketchBook (virtual) </h3>
-        <div class="imagecontainer">
-            <div class="image">
-                <img src="Images/Virtual Art/Nice Sunset.jpg" alt="Nice" title="Nice">
-            </div>
-            <div>
-                <p>Nice, France</p>
-            </div>
-        </div>
-        <div class="imagecontainer">
-            <div class="image">
-                <img src="Images/Virtual Art/Toronto Sunset.jpg" alt="Toronto" title="Toronto">
-            </div>
-            <div>
-                <p>Toronto, Canada</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="gallery">
-        <h3 id="Acrylic"> Acrylic Miniature Collection </h3>
-        <div class="imagecontainer">
-            <div class="image">
-                <img src="Images/Acrylic/norwaystream.png" alt="norwaystream" title="Norway"
-                    height="200">
-            </div>
-        </div>
-        <div class="imagecontainer">
-            <div class="image">
-                <img src="Images/Acrylic/Feria.png" alt="Feria" title="SevilleFeria" height="200">
-            </div>
-        </div>
-        <div class="imagecontainer">
-            <div class="image">
-                <img src="Images/Acrylic/Denmark.png" alt="Denmark" title="Denmark" height="200">
-            </div>
-        </div>
-        <div class="imagecontainer">
-            <div class="image">
-                <img src="Images/Acrylic/korea.png" alt="korea" title="Korea" height="200">
-            </div>
-        </div>
-        <div class="imagecontainer">
-            <div class="image">
-                <img src="Images/Acrylic/lagosbeach.png" alt="lagosbeach" title="lagosbeach"
-                    height="200">
-            </div>
-        </div>
-        <div class="imagecontainer">
-            <div class="image">
-                <img src="Images/Acrylic/park.png" alt="park" title="MadridPark" height="200">
-            </div>
-        </div>
+    <!-- <div class="gallery">
+      <h3 id="watercolor">Watercolour</h3>
+      <div class="imagecontainer">
+        <div></div>
+      </div>
     </div>
     <div class="gallery">
-        <h3 id="watercolor"> Watercolour </h3>
-        <div class="imagecontainer">
-            <div>
-
-            </div>
-        </div>
-    </div>
-    <div class="gallery">
-        <h3 id="other"> Other </h3>
-        <div class="imagecontainer">
-            <div>
-
-            </div>
-        </div>
-    </div>
+      <h3 id="other">Other</h3>
+      <div class="imagecontainer">
+        <div></div>
+      </div>
+    </div> -->
 
     <footer>
-        <div class="footernavbar">
-            <a href="index.htm"> Home. </a>
-            <a href="ProjectBlog.html">Blog.</a>
-            <a href="ProjectPortfolio.html"> Portfolio. </a>
-            <a href="ProjectContact.html"> About + Contact.</a>
-            <a href="Sitemap.html"> Site Map.</a>
-        </div>
+      <div class="footernavbar">
+        <a href="index.htm"> Home. </a>
+        <a href="ProjectBlog.html">Blog.</a>
+        <a href="ProjectPortfolio.html"> Portfolio. </a>
+        <a href="ProjectContact.html"> About + Contact.</a>
+        <a href="Sitemap.html"> Site Map.</a>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

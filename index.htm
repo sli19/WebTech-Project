@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Homepage</title>
     <!-- <style>
         body {
@@ -61,87 +60,234 @@
     <link rel="stylesheet" href="Home.css" type="text/css" />
 
     <style>
-        .intro {
-            margin-left: 300px;
-            margin-right: 300px;
-            line-height: 2;
-        }
+      .intro {
+        margin-left: 300px;
+        margin-right: 300px;
+        line-height: 2;
+      }
 
-        audio {
-            position: fixed;
-            top: 0;
-            right: 0;
-        }
+      audio {
+        position: fixed;
+        top: 0;
+        right: 0;
+      }
 
-        .map {
-            margin: 0, auto;
-            width: auto;
-        }
+      .map {
+        margin: 0, auto;
+        width: auto;
+      }
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .prev:hover,
+      .next:hover {
+        background-color: lightgray;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <audio controls>
-        <!-- Kygo-Firestone(Official Audio) ft. Conrad Sewell from YouTube -->
-        <source src="Images/Firestone.mp3" type="audio/mpeg">
+  <body>
+    <audio id="audio1" controls onended="prompt()">
+      <!-- Kygo-Firestone(Official Audio) ft. Conrad Sewell from YouTube -->
+      <source src="Images/Firestone.mp3" type="audio/mpeg" />
     </audio>
     <header>
-        <nav>
-            <!-- The logo is my design -->
-            <ul class="headerul">
-                <li class="headerli"><img src="Images/logo.png" alt="logo" height="60" title="logo"></li>
-                <li class="headerli"><img src="Images/Name.png" alt="Shanshan Li" height="20" title="name"></li>
-                <li class="headerli"> <a href="index.htm" target="_blank"> Home </a></li>
-                <li class="headerli"> <a href="ProjectBlog.html" target="_blank"> Blogs </a></li>
-                <li class="headerli"> <a href="ProjectPortfolio.html" target="_blank"> Portfolio </a></li>
-                <li class="headerli"> <a href="ProjectContact.html" target="_blank"> About + Contact</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <!-- The logo is my design -->
+        <ul class="headerul">
+          <li class="headerli">
+            <img src="Images/logo.png" alt="logo" height="60" title="logo" />
+          </li>
+          <li class="headerli">
+            <img
+              src="Images/Name.png"
+              alt="Shanshan Li"
+              height="20"
+              title="name"
+            />
+          </li>
+          <li class="headerli">
+            <a href="index.htm" target="_blank"> Home </a>
+          </li>
+          <li class="headerli">
+            <a href="ProjectBlog.html" target="_blank"> Blogs </a>
+          </li>
+          <li class="headerli">
+            <a href="ProjectPortfolio.html" target="_blank"> Portfolio </a>
+          </li>
+          <li class="headerli">
+            <a href="ProjectContact.html" target="_blank"> About + Contact</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-    <article>
-        <!-- This is my photo -->
-        <img src="Images/nice.jpg" alt="cover" title="cover">
-    </article>
+    <div class="slideshow">
+      <!-- These are my photos -->
+      <div class="slides fade">
+        <img id="my-image" src="Images/cover.jpg" alt="cover" title="cover" />
+      </div>
+      <div class="slides fade">
+        <img id="my-image" src="Images/cover2.jpg" alt="cover2" title="cover" />
+      </div>
+      <div class="slides fade">
+        <img id="my-image" src="Images/cover3.jpg" alt="cover3" title="cover" />
+      </div>
+      <div class="slides fade">
+        <img id="my-image" src="Images/cover4.jpg" alt="cover4" title="cover" />
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
 
     <article>
-        <h3> ~ Welcome to Wildblueberry33 ~ </h3>
-        <p class="intro">
-            Follow my journey around our beautiful planet. <br>
-            Each <a href="ProjectBlog.html">blog</a> is a plathera of thoughts and images from places I once called
-            "Home" for an extended period of
-            time. <br>
-            Check out my <a href="ProjectPortfolio.html"> Portfolio </a> for artworks from my travels. <br>
-            Click around! I hope you will enjoy your stay. :)
-        </p>
+      <h3>~ Welcome to Wildblueberry33 ~</h3>
+      <p class="intro">
+        Follow my journey around our beautiful planet. <br />
+        Each <a href="ProjectBlog.html">blog</a> is a plathera of thoughts and
+        images from places I once called "Home" for an extended period of time.
+        <br />
+        Check out my <a href="ProjectPortfolio.html"> Portfolio </a> for
+        artworks from my travels. <br />
+        Click around! I hope you will enjoy your stay. :)
+      </p>
     </article>
-    <br>
+    <br />
 
     <!-- website for map: https://upload.wikimedia.org/wikipedia/en/9/99/BlankMap-World-Continents-Coloured.png -->
-    <img class="map" src="Images/worldmap.png" alt="map" title="worldmap" usemap="#worldmap" height="400px"
-        width="900px">
+    <img
+      class="map"
+      src="Images/worldmap.png"
+      alt="map"
+      title="worldmap"
+      usemap="#worldmap"
+      height="400px"
+      width="900px"
+    />
     <map name="worldmap">
-        <area shape="rect" coords="23px, 16px, 200px, 100px," href="Blog_Toronto.html" alt="Toronto" target="_blank">
-        <area shape="rect" coords="23px, 100px, 200px, 140px," href="Blog_Boston.html" alt="Boston" target="_blank">
-        <area shape="rect" coords="300px, 80px, 350px, 120px," href="Blog_Seville.html" alt="Seville" target="_blank">
-        <area shape="rect" coords="500px, 80px, 700px, 160px," href="Blog_Shanghai.html" alt="Shanghai" target="_blank">
+      <area
+        shape="rect"
+        coords="23px, 16px, 200px, 100px,"
+        href="Blog_Toronto.html"
+        alt="Toronto"
+        target="_blank"
+      />
+      <area
+        shape="rect"
+        coords="23px, 100px, 200px, 140px,"
+        href="Blog_Boston.html"
+        alt="Boston"
+        target="_blank"
+      />
+      <area
+        shape="rect"
+        coords="300px, 80px, 350px, 120px,"
+        href="Blog_Seville.html"
+        alt="Seville"
+        target="_blank"
+      />
+      <area
+        shape="rect"
+        coords="500px, 80px, 700px, 160px,"
+        href="Blog_Shanghai.html"
+        alt="Shanghai"
+        target="_blank"
+      />
     </map>
     <p>*Clickable map. Click on Canada, USA, Spain, or China to go to blog.*</p>
 
-
-    <div>
-
-    </div>
+    <div></div>
 
     <footer>
-        <div class="footernavbar">
-            <a href="index.htm"> Home. </a>
-            <a href="ProjectBlog.html">Blog.</a>
-            <a href="ProjectPortfolio.html"> Portfolio. </a>
-            <a href="ProjectContact.html"> About + Contact.</a>
-            <a href="Sitemap.html"> Site Map.</a>
-        </div>
+      <div class="footernavbar">
+        <a href="index.htm"> Home. </a>
+        <a href="ProjectBlog.html">Blog.</a>
+        <a href="ProjectPortfolio.html"> Portfolio. </a>
+        <a href="ProjectContact.html"> About + Contact.</a>
+        <a href="Sitemap.html"> Site Map.</a>
+      </div>
     </footer>
-</body>
+    <script>
+      document.addEventListener("keypress", function(event) {
+        if (event.keyCode == 32) {
+          event.preventDefault();
+          if (audio1.paused == true) audio1.play();
+          else audio1.pause();
+        }
+        console.log("audio1");
+      });
 
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+
+      //   const slides = [
+      //     "Images/cover.jpg",
+      //     "Images/cover2.jpg",
+      //     "Images/cover3.jpg",
+      //     "Images/cover4.jpg"
+      //   ];
+      //   let i;
+      //   function slideshow() {
+      //     let coverPhotos = document.getElementById("my-image");
+
+      //     if (i == slides.length) {
+      //       i = 0;
+      //     }
+      //     console.log(coverPhotos);
+      //     coverPhotos.src = slides[i];
+      //     i++;
+      //     setTimeout("slideshow()", 1500);
+      //   }
+    </script>
+  </body>
 </html>

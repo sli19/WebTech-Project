@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="home.css" type="text/css" />
+
+    <style>
+      .row {
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .row,
+      .row > .column {
+        padding: 8px;
+      }
+      .column {
+        width: 40%;
+        justify-content: space-between;
+        display: inline-block;
+      }
+      .content {
+        padding: 10px;
+      }
+      .subtitle {
+        font-size: 30px;
+        font-style: italic;
+      }
+    </style>
+    <script>
+      // Onmouseover, the image will enlarge and subtitle changes to dates.
+      // Onmouseout, image and subtitle reverts to the original.
+      function change(x) {
+        let seville = document.getElementById("seville");
+        let shanghai = document.getElementById("shanghai");
+        let toronto = document.getElementById("toronto");
+        let boston = document.getElementById("boston");
+        if (x == "enlarge") {
+          let w = seville.width;
+          console.log("seville enlarge = " + w);
+          w = w * 1.05;
+          seville.style.width = w + "px";
+          document.getElementById("title1").innerHTML =
+            "January 2019 - May 2019.";
+        } else if (x == "reduce") {
+          let w = seville.width;
+          console.log("seville reduce = " + w);
+          w = w / 1.05;
+          seville.style.width = w + "px";
+          document.getElementById("title1").innerHTML = "Seville, Spain.";
+        } else if (x == "enlarge2") {
+          let w = shanghai.width;
+          console.log("shanghai enlarge = " + w);
+          w = w * 1.05;
+          shanghai.style.width = w + "px";
+          document.getElementById("title2").innerHTML =
+            "May 2018 - August 2018.";
+        } else if (x == "reduce2") {
+          let w = shanghai.width;
+          console.log("shanghai reduce = " + w);
+          w = w / 1.05;
+          shanghai.style.width = w + "px";
+          document.getElementById("title2").innerHTML = "Shanghai, China.";
+        } else if (x == "enlarge3") {
+          let w = toronto.width;
+          console.log("toronto enlarge = " + w);
+          w = w * 1.05;
+          toronto.style.width = w + "px";
+          document.getElementById("title3").innerHTML =
+            "May 2019 - August 2019.";
+        } else if (x == "reduce3") {
+          let w = toronto.width;
+          console.log("toronto reduce = " + w);
+          w = w / 1.05;
+          toronto.style.width = w + "px";
+          document.getElementById("title3").innerHTML = "Toronto, Canada.";
+        } else if (x == "enlarge4") {
+          let w = boston.width;
+          console.log("boston enlarge = " + w);
+          w = w * 1.05;
+          boston.style.width = w + "px";
+          document.getElementById("title4").innerHTML =
+            "September 2016 - December 2019.";
+        } else if (x == "reduce4") {
+          let w = boston.width;
+          console.log("boston reduce = " + w);
+          w = w / 1.05;
+          boston.style.width = w + "px";
+          document.getElementById("title4").innerHTML = "Boston, USA.";
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <!-- The logo is my design -->
+        <ul class="headerul">
+          <li class="headerli">
+            <img src="images/logo.png" alt="logo" height="60" title="logo" />
+          </li>
+          <li class="headerli">
+            <img
+              src="images/Name.png"
+              alt="Shanshan Li"
+              height="20"
+              title="name"
+            />
+          </li>
+          <li class="headerli">
+            <a href="index.htm" target="_blank"> Home </a>
+          </li>
+          <li class="headerli">
+            <a href="blog.html" target="_blank"> Blogs </a>
+          </li>
+          <li class="headerli">
+            <a href="portfolio.html" target="_blank"> Portfolio </a>
+          </li>
+          <li class="headerli">
+            <a href="contact.html" target="_blank"> About + Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <article>
+      <!-- I took this photo -->
+      <img src="images/florida.jpg" alt="cover" title="cover" />
+    </article>
+
+    <h4 class="subtitle">~ Moments in time ~</h4>
+    <div class="row">
+      <div class="column">
+        <div class="content">
+          <a href="blog_seville.html">
+            <img
+              id="seville"
+              class="blog-img"
+              onmouseover="change('enlarge')"
+              onmouseout="change('reduce')"
+              src="images/seville.jpg"
+              alt="Seville"
+              title="Seville"
+            />
+          </a>
+          <!-- Photo: https://images5.alphacoders.com/598/598366.jpg -->
+        </div>
+        <div>
+          <p id="title1">
+            Seville, Spain.
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <a href="blog_shanghai.html">
+            <img
+              id="shanghai"
+              class="blog-img"
+              onmouseover="change('enlarge2')"
+              onmouseout="change('reduce2')"
+              src="images/shanghai1.png"
+              alt="Shanghai"
+              title="Shanghai"
+            />
+          </a>
+          <!-- Photo: https://images.unsplash.com/photo-1538428494232-9c0d8a3ab403?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80 -->
+        </div>
+        <div>
+          <p id="title2">
+            Shanghai, China.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="content">
+          <a href="blog_toronto.html">
+            <img
+              id="toronto"
+              class="blog-img"
+              onmouseover="change('enlarge3')"
+              onmouseout="change('reduce3')"
+              src="images/toronto1.jpg"
+              alt="Toronto"
+              title="Toronto"
+            />
+          </a>
+          <!-- Photo: https://www.nationalgeographic.com/content/dam/travel/Guide-Pages/north-america/toronto-travel.adapt.1900.1.jpg -->
+        </div>
+        <div>
+          <p id="title3">
+            Toronto, Canada.
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <a href="blog_boston.html">
+            <img
+              id="boston"
+              class="blog-img"
+              onmouseover="change('enlarge4')"
+              onmouseout="change('reduce4')"
+              src="images/boston1.jpg"
+              alt="Boston"
+              title="Boston"
+            />
+          </a>
+          <!-- Photo: https://usa.um.dk/~/media/USA/Boston%20Skyline%20resized.ashx -->
+        </div>
+        <div>
+          <p id="title4">
+            Boston, USA.
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footernavbar">
+        <a href="index.htm"> Home. </a>
+        <a href="blog.html">Blog.</a>
+        <a href="portfolio.html"> Portfolio. </a>
+        <a href="contact.html"> About + Contact.</a>
+        <a href="sitemap.html"> Site Map.</a>
+      </div>
+    </footer>
+  </body>
+</html>

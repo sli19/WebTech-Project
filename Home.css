@@ -41,8 +41,8 @@ li a {
 }
 
 .headerli a:hover {
-    background-color: rgb(233, 233, 233);
-    color: aqua;
+    background-color: rgb(169, 222, 249);
+    color: black;
 }
 
 img {

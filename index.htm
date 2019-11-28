@@ -5,59 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Homepage</title>
-    <!-- <style>
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            /* font-style: italic; */
-            margin-left: 0px;
-            margin-right: 0px;
-            text-align: center;
-        }
-
-        header {
-            background-color: white;
-            padding: 7px;
-            width: 100%;
-        }
-
-        nav {
-            list-style-type: none;
-            text-align: center;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            overflow: hidden;
-            background-color: white;
-            text-align: center;
-        }
-
-        li {
-            float: none;
-            display: inline;
-        }
-
-        li a {
-            display: inline-block;
-            color: grey;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        li a:hover {
-            background-color: rgb(233, 233, 233);
-            color: aqua;
-        }
-
-        img {
-            width: 100%;
-            object-fit: contain;
-        }
-    </style> -->
-
-    <link rel="stylesheet" href="Home.css" type="text/css" />
+    <link rel="stylesheet" href="home.css" type="text/css" />
 
     <style>
       .intro {
@@ -65,13 +13,11 @@
         margin-right: 300px;
         line-height: 2;
       }
-
       audio {
         position: fixed;
         top: 0;
         right: 0;
       }
-
       .map {
         margin: 0, auto;
         width: auto;
@@ -81,15 +27,16 @@
         cursor: pointer;
         position: absolute;
         top: 50%;
-        width: auto;
         padding: 16px;
-        margin-top: -22px;
         color: white;
         font-weight: bold;
-        font-size: 18px;
+        font-size: 30px;
         transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
         user-select: none;
+      }
+      .prev {
+        left: 0;
+        border-radius: 3px 0 0 3px;
       }
       .next {
         right: 0;
@@ -105,18 +52,18 @@
   <body>
     <audio id="audio1" controls onended="prompt()">
       <!-- Kygo-Firestone(Official Audio) ft. Conrad Sewell from YouTube -->
-      <source src="Images/Firestone.mp3" type="audio/mpeg" />
+      <source src="images/firestone.mp3" type="audio/mpeg" />
     </audio>
     <header>
       <nav>
         <!-- The logo is my design -->
         <ul class="headerul">
           <li class="headerli">
-            <img src="Images/logo.png" alt="logo" height="60" title="logo" />
+            <img src="images/logo.png" alt="logo" height="60" title="logo" />
           </li>
           <li class="headerli">
             <img
-              src="Images/Name.png"
+              src="images/Name.png"
               alt="Shanshan Li"
               height="20"
               title="name"
@@ -126,13 +73,13 @@
             <a href="index.htm" target="_blank"> Home </a>
           </li>
           <li class="headerli">
-            <a href="ProjectBlog.html" target="_blank"> Blogs </a>
+            <a href="blog.html" target="_blank"> Blogs </a>
           </li>
           <li class="headerli">
-            <a href="ProjectPortfolio.html" target="_blank"> Portfolio </a>
+            <a href="portfolio.html" target="_blank"> Portfolio </a>
           </li>
           <li class="headerli">
-            <a href="ProjectContact.html" target="_blank"> About + Contact</a>
+            <a href="contact.html" target="_blank"> About + Contact</a>
           </li>
         </ul>
       </nav>
@@ -141,16 +88,16 @@
     <div class="slideshow">
       <!-- These are my photos -->
       <div class="slides fade">
-        <img id="my-image" src="Images/cover.jpg" alt="cover" title="cover" />
+        <img id="my-image" src="images/cover.jpg" alt="cover" title="cover" />
       </div>
       <div class="slides fade">
-        <img id="my-image" src="Images/cover2.jpg" alt="cover2" title="cover" />
+        <img id="my-image" src="images/cover2.jpg" alt="cover2" title="cover" />
       </div>
       <div class="slides fade">
-        <img id="my-image" src="Images/cover3.jpg" alt="cover3" title="cover" />
+        <img id="my-image" src="images/cover3.jpg" alt="cover3" title="cover" />
       </div>
       <div class="slides fade">
-        <img id="my-image" src="Images/cover4.jpg" alt="cover4" title="cover" />
+        <img id="my-image" src="images/cover4.jpg" alt="cover4" title="cover" />
       </div>
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -166,10 +113,10 @@
       <h3>~ Welcome to Wildblueberry33 ~</h3>
       <p class="intro">
         Follow my journey around our beautiful planet. <br />
-        Each <a href="ProjectBlog.html">blog</a> is a plathera of thoughts and
+        Each <a href="blog.html">blog</a> is a plathera of thoughts and
         images from places I once called "Home" for an extended period of time.
         <br />
-        Check out my <a href="ProjectPortfolio.html"> Portfolio </a> for
+        Check out my <a href="portfolio.html"> portfolio </a> for
         artworks from my travels. <br />
         Click around! I hope you will enjoy your stay. :)
       </p>
@@ -179,7 +126,7 @@
     <!-- website for map: https://upload.wikimedia.org/wikipedia/en/9/99/BlankMap-World-Continents-Coloured.png -->
     <img
       class="map"
-      src="Images/worldmap.png"
+      src="images/worldmap.png"
       alt="map"
       title="worldmap"
       usemap="#worldmap"
@@ -190,28 +137,28 @@
       <area
         shape="rect"
         coords="23px, 16px, 200px, 100px,"
-        href="Blog_Toronto.html"
+        href="blog_toronto.html"
         alt="Toronto"
         target="_blank"
       />
       <area
         shape="rect"
         coords="23px, 100px, 200px, 140px,"
-        href="Blog_Boston.html"
+        href="blog_boston.html"
         alt="Boston"
         target="_blank"
       />
       <area
         shape="rect"
         coords="300px, 80px, 350px, 120px,"
-        href="Blog_Seville.html"
+        href="blog_seville.html"
         alt="Seville"
         target="_blank"
       />
       <area
         shape="rect"
         coords="500px, 80px, 700px, 160px,"
-        href="Blog_Shanghai.html"
+        href="blog_shanghai.html"
         alt="Shanghai"
         target="_blank"
       />
@@ -223,10 +170,10 @@
     <footer>
       <div class="footernavbar">
         <a href="index.htm"> Home. </a>
-        <a href="ProjectBlog.html">Blog.</a>
-        <a href="ProjectPortfolio.html"> Portfolio. </a>
-        <a href="ProjectContact.html"> About + Contact.</a>
-        <a href="Sitemap.html"> Site Map.</a>
+        <a href="blog.html">Blog.</a>
+        <a href="portfolio.html"> Portfolio. </a>
+        <a href="contact.html"> About + Contact.</a>
+        <a href="sitemap.html"> Site Map.</a>
       </div>
     </footer>
     <script>
@@ -269,25 +216,6 @@
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
       }
-
-      //   const slides = [
-      //     "Images/cover.jpg",
-      //     "Images/cover2.jpg",
-      //     "Images/cover3.jpg",
-      //     "Images/cover4.jpg"
-      //   ];
-      //   let i;
-      //   function slideshow() {
-      //     let coverPhotos = document.getElementById("my-image");
-
-      //     if (i == slides.length) {
-      //       i = 0;
-      //     }
-      //     console.log(coverPhotos);
-      //     coverPhotos.src = slides[i];
-      //     i++;
-      //     setTimeout("slideshow()", 1500);
-      //   }
     </script>
   </body>
 </html>

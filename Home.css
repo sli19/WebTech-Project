@@ -42,7 +42,7 @@ li a {
 
 .headerli a:hover {
     background-color: rgb(169, 222, 249);
-    color: black;
+    color: white;
 }
 
 img {
@@ -55,11 +55,6 @@ footer {
     height: 100px;
     width: 100%;
 }
-
-/* .socialmedia {
-    display: flex;
-    justify-content: center;
-} */
 
 .footernavbar {
     overflow: hidden;

@@ -1,43 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>About&Contact</title>
     <link rel="stylesheet" href="home.css" type="text/css" />
     <style>
-        .table {
-            text-align: left;
-            margin: 0 auto;
-            font: 14px;
-        }
-        .split {
-            padding: 0;
-            margin: 50px auto 50px auto;
-            display: inline-block;
-        }
-        .container {
-            width: 40%;
-            float: left;
-            margin: 20px;
-        }
-        .aboutme {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            line-height: 2;
-        }
-        .applogo {
-            width: 100px;
-            display: inline-flex;
-        }
+      .table {
+        text-align: left;
+        margin: 0 auto;
+        font: 14px;
+      }
+      .split {
+        padding: 0;
+        margin: 50px auto 50px auto;
+        display: inline-block;
+      }
+      .container {
+        width: 40%;
+        float: left;
+        margin: 20px;
+      }
+      .aboutme {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        line-height: 2;
+      }
+      .applogo {
+        width: 100px;
+        display: inline-flex;
+      }
     </style>
-</head>
-<!-- All images on this page are mine -->
-<body>
-<header>
+    <!-- There is automatic form validation why adding "required" to inputs -->
+    <!-- <script>
+      function validateForm() {
+        let myForm = document.getElementsByName("form1");
+        let firstName = myForm.firstName.value;
+        let lastName = myForm.lastName.value;
+        let email = myForm.email.value;
+        let subject = myForm.subject.value;
+        let comment = myForm.comment.value;
+        if (
+          firstName == "" ||
+          lastName == "" ||
+          email == "" ||
+          subject == "" ||
+          comment == ""
+        ) {
+          console.log("Name must be filled out");
+        } else {
+            console.log("All field have been filled in")
+        }
+        return false;
+      }
+    </script> -->
+  </head>
+  <!-- All images on this page are mine -->
+  <body>
+    <header>
       <nav>
         <!-- The logo is my design -->
         <ul class="headerul">
@@ -67,78 +89,97 @@
         </ul>
       </nav>
     </header>
-    <hr>
+    <hr />
     <div class="split">
-        <div class="container">
-            <div class="aboutme">
-                <img src="images/me.png" alt="me" height="400px">
-            </div>
+      <div class="container">
+        <div class="aboutme">
+          <img src="images/me.png" alt="me" height="400px" />
         </div>
-        <div class="container">
-            <div class="aboutme">
-                <h3 id="about"> About Me</h3>
-                <p>
-                    Hello! My name is Shanshan. I am in my final semester at Babson College getting my bachelor's degree
-                    in Business Administrations and Management. <br>
-                    Over the last few decades, I've had the opportunity to do quite a lot of traveling and have lived in
-                    three different continents so far. On this site, I would like to share with you some of my
-                    experiences and artworks I've completed. <br>
+      </div>
+      <div class="container">
+        <div class="aboutme">
+          <h3 id="about">About Me</h3>
+          <div>
+            Hello! My name is Shanshan. I am in my final semester at Babson
+            College getting my bachelor's degree in Business Administrations and
+            Management. <br />
+            Over the last few decades, I've had the opportunity to do quite a
+            lot of traveling and have lived in three different continents so
+            far. On this site, I would like to share with you some of my
+            experiences and artworks I've completed. <br />
 
-                    Check out my Social Media: <br>
-                    <div class="applogo">
-                        <a href="https://www.instagram.com/shanshan_li23/"><img src="images/instagram.png"
-                                alt="instagram" title="instalogo" height="30px"></a>
-                        <a href="https://www.linkedin.com/in/shanshanli98/"><img src="images/linkedin.png"
-                                alt="linkedin" title="linkedinlogo" height="30px"></a>
-                    </div>
-                </p>
+            Check out my Social Media: <br />
+            <div class="applogo">
+              <a href="https://www.instagram.com/shanshan_li23/"
+                ><img
+                  src="images/instagram.png"
+                  alt="instagram"
+                  title="instalogo"
+                  height="30px"
+              /></a>
+
+              <a href="https://www.linkedin.com/in/shanshanli98/"
+                ><img
+                  src="images/linkedin.png"
+                  alt="linkedin"
+                  title="linkedinlogo"
+                  height="30px"
+              /></a>
             </div>
+          </div>
         </div>
+      </div>
     </div>
 
-    <hr>
+    <hr />
     <article>
-        <h3 id="contact"> Let's Connect. </h3>
+      <h3 id="contact">Let's Connect.</h3>
     </article>
-    <form action="mailto:sli19@babson.edu" method="POST" enctype="text/plain">
-        <table class="table">
-            <tr>
-                <th>
-                    First Name <br>
-                    <input type="text" name="Firstname" size="40" required>
-                </th>
-                <th>
-                    Last Name <br>
-                    <input type="text" name="Lastname" size="40" required>
-                </th>
-            </tr>
-            <tr>
-                <th colspan="2">
-                    Your Email <br>
-                    <input type="text" name="Email" size="90" required>
-                </th>
-            </tr>
-            <tr>
-                <th colspan="2">
-                    Subject <br>
-                    <input type="text" name="Subject" size="100%" required>
-                </th>
-            </tr>
-            <tr>
-                <th colspan="2">
-                    Message <br>
-                    <textarea name="Comment" id="Comment" cols="90" rows="10"></textarea>
-                </th>
-            </tr>
-            <tr>
-                <th>
-                    <input type="submit" value="send">
-                </th>
-            </tr>
-        </table>
+    <form
+      name="form1"
+      action="mailto:sli19@babson.edu"
+      method="POST"
+      onsubmit="return validateForm()"
+      enctype="text/plain"
+    >
+      <table class="table">
+        <tr>
+          <th>
+            First Name <br />
+            <input type="text" name="firstName" size="40" required />
+          </th>
+          <th>
+            Last Name <br />
+            <input type="text" name="lastName" size="40" required />
+          </th>
+        </tr>
+        <tr>
+          <th colspan="2">
+            Your Email <br />
+            <input type="text" name="email" size="90" required />
+          </th>
+        </tr>
+        <tr>
+          <th colspan="2">
+            Subject <br />
+            <input type="text" name="subject" size="100%" required />
+          </th>
+        </tr>
+        <tr>
+          <th colspan="2">
+            Message <br />
+            <textarea name="comment" cols="90" rows="10"></textarea>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <input type="submit" value="send" />
+          </th>
+        </tr>
+      </table>
     </form>
 
-     <footer>
+    <footer>
       <div class="footernavbar">
         <a href="index.htm"> Home. </a>
         <a href="blog.html">Blog.</a>
@@ -147,6 +188,5 @@
         <a href="sitemap.html"> Site Map.</a>
       </div>
     </footer>
-</body>
-
+  </body>
 </html>

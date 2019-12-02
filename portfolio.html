@@ -8,20 +8,37 @@
     <link rel="stylesheet" href="home.css" type="text/css" />
 
     <style>
-      .sectionbackground {
+      .button-group {
+        background-color: white;
+        background-image: url("images/palmtrees.jpg");
+        height: 700px;
+        background-size: cover;
+      }
+      .button-group .button{
         height: 100px;
-        width: 100%;
-        background-color: lightgray;
+        font-family: Brush Script MT, Brush Script Std, cursive;
+        background-color: transparent;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
         display: inline-block;
+        font-size: x-large;
+        cursor: pointer;
+        margin-top: 100px;
+      }
+      .button-group .button:hover {
+        color: rgb(169, 222, 249);
       }
       * {
         box-sizing: border-box;
       }
       .row {
-        max-width: 1200px;
+        max-width: 85%;
         margin-left: auto;
         margin-right: auto;
-        height: 500px;
+        height: 100%;
       }
       .row,
       .row > .column {
@@ -33,10 +50,10 @@
         width: 40%;
       }
       .row-2 {
-        max-width: 1200px;
+        max-width: 85%;
         margin-left: auto;
         margin-right: auto;
-        height: 400px;
+        height: 100%;
       }
       .row-2,
       .row-2 > .column-2 {
@@ -47,12 +64,78 @@
         display: inline-block;
         width: 25%;
       }
-
       .content {
         background-color: rgb(169, 222, 249);
         padding: 10px;
       }
     </style>
+
+    <script
+      crossorigin="anonymous"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+    ></script>
+    <script type="text/javascript">
+      // When user clicks on button, the page will only show works under that section.
+      $(function() {
+        $("#pencil").click(function() {
+          $("h3.sketchbooksection").hide();
+          $("p.sketchbooksection").hide();
+          $("div.sketchbooksection").hide();
+
+          $("h3.acrylicsection").hide();
+          $("p.acrylicsection").hide();
+          $("div.acrylicsection").hide();
+
+          $("h3.pencilsection").show();
+          $("p.pencilsection").show();
+          $("div.pencilsection").show();
+        });
+
+        $("#sketchbook").click(function() {
+          $("h3.pencilsection").hide();
+          $("p.pencilsection").hide();
+          $("div.pencilsection").hide();
+
+          $("h3.acrylicsection").hide();
+          $("p.acrylicsection").hide();
+          $("div.acrylicsection").hide();
+
+          $("h3.sketchbooksection").show();
+          $("p.sketchbooksection").show();
+          $("div.sketchbooksection").show();
+        });
+
+        $("#acrylic").click(function() {
+          $("h3.pencilsection").hide();
+          $("p.pencilsection").hide();
+          $("div.pencilsection").hide();
+
+          $("h3.sketchbooksection").hide();
+          $("p.sketchbooksection").hide();
+          $("div.sketchbooksection").hide();
+
+          $("h3.acrylicsection").show();
+          $("p.acrylicsection").show();
+          $("div.acrylicsection").show();
+        });
+
+        $("#all").click(function() {
+          // $("*").show(); for some reason, this shows everything including css...
+          $("h3.pencilsection").show();
+          $("p.pencilsection").show();
+          $("div.pencilsection").show();
+
+          $("h3.sketchbooksection").show();
+          $("p.sketchbooksection").show();
+          $("div.sketchbooksection").show();
+
+          $("h3.acrylicsection").show();
+          $("p.acrylicsection").show();
+          $("div.acrylicsection").show();
+        });
+      });
+    </script>
   </head>
   <!-- All images on this page are mine -->
   <body>
@@ -87,21 +170,17 @@
       </nav>
     </header>
     <hr />
-    <!-- <div class="sectionbackground">
-      find a header photo
-      <ul class="sectionbackground">
-        <li>Pencil Sketches.</li>
-        <li>Acrylic.</li>
-        <li>Watercolour.</li>
-        <li>SketchBook.</li>
-        <li>Other.</li>
-      </ul>
-    </div> -->
+    <div class="button-group">
+      <button class="button" id="pencil">Pencil Sketches.</button>
+      <button class="button" id="sketchbook">SketchBook</button>
+      <button class="button" id="acrylic">Acrylic.</button>
+      <button class="button" id="all">Show All.</button>
+    </div>
 
-    <h3 class="subheading">Pencil Sketches</h3>
-    <p>Drawing the world in every shade of grey</p>
+    <h3 class="subheading pencilsection">Pencil Sketches</h3>
+    <p class="pencilsection">Drawing the world in every shade of grey</p>
     <br />
-    <div class="row">
+    <div class="row pencilsection">
       <div class="column">
         <div class="content">
           <img
@@ -127,7 +206,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row pencilsection">
       <div class="column">
         <div class="content">
           <img
@@ -155,10 +234,10 @@
     </div>
     <br />
 
-    <h3 class="subheading">SketchBook (virtual)</h3>
-    <p>Virtual artworks done on SketchBook</p>
+    <h3 class="subheading sketchbooksection">SketchBook (virtual)</h3>
+    <p class="sketchbooksection">Virtual artworks done on SketchBook</p>
     <br />
-    <div class="row">
+    <div class="row sketchbooksection">
       <div class="column">
         <div class="content">
           <img
@@ -186,10 +265,12 @@
     </div>
     <br />
 
-    <h3 class="subheading">Acrylic Miniature Collection</h3>
-    <p>Small acrylic paintings for a wall collage project</p>
+    <h3 class="subheading acrylicsection">Acrylic Miniature Collection</h3>
+    <p class="acrylicsection">
+      Small acrylic paintings for a wall collage project
+    </p>
     <br />
-    <div class="row-2">
+    <div class="row-2 acrylicsection">
       <div class="column-2">
         <div class="content">
           <img
@@ -225,7 +306,7 @@
       </div>
     </div>
 
-    <div class="row-2">
+    <div class="row-2 acrylicsection">
       <div class="column-2">
         <div class="content">
           <img

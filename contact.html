@@ -16,6 +16,8 @@
         padding: 0;
         margin: 50px auto 50px auto;
         display: inline-block;
+        background-color: rgb(169, 222, 249);
+        background-image: linear-gradient(to bottom right, rgb(169, 222, 249), white);
       }
       .container {
         width: 40%;
@@ -33,6 +35,18 @@
         display: inline-flex;
       }
     </style>
+    <script>
+      function change() {
+        let x = document.getElementById("description");
+        let y = document.getElementById("about");
+        y.style.display = "none";
+        x.style.fontStyle = "italic";
+        x.style.fontFamily = "Courier-New";
+        x.style.fontSize = "25px";
+        // x.style.color = "rgb(169, 222, 249)";
+        x.innerHTML = "Thank you for visiting my website! <br> I hope you enjoyed your stay!"
+      }
+    </script>
     <!-- There is automatic form validation why adding "required" to inputs -->
     <!-- <script>
       function validateForm() {
@@ -98,8 +112,9 @@
       </div>
       <div class="container">
         <div class="aboutme">
-          <h3 id="about">About Me</h3>
-          <div>
+          <h3 id="about">~ About Me ~</h3>
+          <!-- Click on the paragraph to see the text change -->
+          <div id="description" onclick="change()">
             Hello! My name is Shanshan. I am in my final semester at Babson
             College getting my bachelor's degree in Business Administrations and
             Management. <br />
@@ -180,6 +195,7 @@
     </form>
 
     <footer>
+      <br />
       <div class="footernavbar">
         <a href="index.htm"> Home. </a>
         <a href="blog.html">Blog.</a>

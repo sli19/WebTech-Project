@@ -51,10 +51,10 @@
       }
     </style>
   </head>
-
+  <!-- Completed pages include: Home, Blog, Portfolio, About me + Contact,  Seville Blog and Shanghai Blog-->
   <body>
     <audio id="audio1" controls onended="prompt()">
-      <!-- Kygo-Firestone(Official Audio) ft. Conrad Sewell from YouTube -->
+      <!-- Audio file: Kygo-Firestone(Official Audio) ft. Conrad Sewell from YouTube -->
       <source src="images/firestone.mp3" type="audio/mpeg" />
     </audio>
     <header>
@@ -66,7 +66,7 @@
           </li>
           <li class="headerli">
             <img
-              src="images/Name.png"
+              src="images/name.png"
               alt="Shanshan Li"
               height="20"
               title="name"
@@ -125,7 +125,7 @@
       </p>
     </article>
     <br />
-    <!-- Clickable image. -->
+    <!-- Image map with hot-spots -->
     <!-- website for map: https://upload.wikimedia.org/wikipedia/en/9/99/BlankMap-World-Continents-Coloured.png -->
     <img
       class="map"
@@ -168,8 +168,7 @@
     </map>
     <p>*Clickable map. Click on Canada, USA, Spain, or China to go to blog.*</p>
 
-    <div></div>
-
+    <!-- Link to site-map page is at the bottom of each page -->
     <footer>
       <br />
       <div class="footernavbar">
@@ -179,8 +178,15 @@
         <a href="contact.html"> About + Contact.</a>
         <a href="sitemap.html"> Site Map.</a>
       </div>
+      <br />
+      <div id="copyright">
+        All intellectual property on this page (except the image of a map) is
+        the property of the site-owner.
+      </div>
     </footer>
     <script>
+      // Additional functionality.
+      // The song plays and pauses when the user presses the space bar.
       document.addEventListener("keypress", function(event) {
         if (event.keyCode == 32) {
           event.preventDefault();

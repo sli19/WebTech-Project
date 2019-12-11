@@ -7,7 +7,26 @@
     <title>Site Map</title>
 
     <link rel="stylesheet" href="home.css" type="text/css" />
-    <style></style>
+    <style>
+      .pagetitles {
+        font-weight: bold;
+      }
+      .section {
+        background-color: rgb(169, 222, 249);
+        background-image: linear-gradient(
+          to bottom right,
+          rgb(169, 222, 249),
+          white
+        );
+      }
+      a {
+        display: inline-block;
+        color: grey;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+    </style>
   </head>
 
   <body>
@@ -20,7 +39,7 @@
           </li>
           <li class="headerli">
             <img
-              src="images/Name.png"
+              src="images/name.png"
               alt="Shanshan Li"
               height="20"
               title="name"
@@ -44,70 +63,55 @@
 
     <h3>Site Map</h3>
     <hr />
-    <div>
-      <div>
-        <ul>
-          <li>
-            <a href="index.htm">
-              <caption>
-                Homepage
-              </caption>
-            </a>
-          </li>
-          <br />
-        </ul>
+    <div class="section">
+      <div class="row">
+        <a href="index.htm" class="pagetitles"> Homepage</a>
       </div>
-      <div>
-        <ul>
-          <li>
-            <a href="blog.html">
-              <caption>
-                Blogs
-              </caption>
-            </a>
-          </li>
-          <br />
-          <li><a href="blog_toronto.html"> Toronto </a></li>
-          <li><a href="blog_shanghai.html"> Shanghai </a></li>
-          <li><a href="blog_boston.html"> Boston </a></li>
-          <li><a href="blog_seville.html"> Seville </a></li>
-        </ul>
+      <div class="row"><a href="blog.html" class="pagetitles"> Blogs</a></div>
+      <div class="row">
+        <a href="blog_toronto.html"> Toronto </a>
+        <a href="blog_shanghai.html"> Shanghai </a>
+        <a href="blog_boston.html"> Boston </a>
+        <a href="blog_seville.html"> Seville </a>
       </div>
-      <div>
-        <ul>
-          <li>
-            <a href="portfolio.html">
-              <caption>
-                Portfolio
-              </caption>
-            </a>
-          </li>
-          <br />
-          <li>
-            <a href="portfolio.html#Sketches"> Pencil Sketches </a>
-          </li>
-          <li><a href="portfolio.html#Sketchbook"> SketchBook </a></li>
-          <li><a href="portfolio.html#Acrylic"> Acrylic </a></li>
-        </ul>
+      <div class="row">
+        <a href="portfolio.html" class="pagetitles">Portfolio</a>
       </div>
-      <div>
-        <ul>
-          <!-- <caption> About Me + Contact </caption> <br> -->
-          <li><a href="contact.html#about"> About Me </a></li>
-          <li><a href="contact.html#contact"> Contact </a></li>
-        </ul>
-        <ul>
-          <li><a href="credit.htm"> Credit Page</a></li>
-        </ul>
+      <div class="row">
+        <a href="portfolio.html#Sketches"> Pencil Sketches </a>
+        <a href="portfolio.html#Sketchbook"> SketchBook </a>
+        <a href="portfolio.html#Acrylic"> Acrylic </a>
       </div>
+      <div class="row">
+        <a href="contact.html#about" class="pagetitles"> About Me </a>
+        <a href="contact.html#contact" class="pagetitles"> Contact </a>
+      </div>
+      <div class="row"><a href="credit.htm"> Credit Page</a></div>
     </div>
     <br />
     <br />
+    <hr />
     <div>
       "I, Shanshan, pledge my honor that I have neither received nor provided
       unauthorized assistance during the completion of this work. I have read
       the term project instructions and observed all the restrictions and
       limitations specified therein."
     </div>
+    <hr />
+    <footer>
+      <br />
+      <div class="footernavbar">
+        <a href="index.htm"> Home. </a>
+        <a href="blog.html">Blog.</a>
+        <a href="portfolio.html"> Portfolio. </a>
+        <a href="contact.html"> About + Contact.</a>
+        <a href="sitemap.html"> Site Map.</a>
+      </div>
+      <br />
+      <div id="copyright">
+        All intellectual property on this page (except the image of a map) is
+        the property of the site-owner.
+      </div>
+    </footer>
   </body>
 </html>

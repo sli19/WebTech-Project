@@ -71,7 +71,6 @@
         font-style: italic;
         font-size: 12px;
       }
-      
     </style>
 
     <script
@@ -81,6 +80,7 @@
     ></script>
     <!-- JQuery section below -->
     <script type="text/javascript">
+      // JQuery element here.
       // When user clicks on button, the page will only show works under that section.
       $(function() {
         $("#pencil").click(function() {
@@ -126,7 +126,6 @@
         });
 
         $("#all").click(function() {
-          // $("*").show(); for some reason, this shows everything including css...
           $("h3.pencilsection").show();
           $("p.pencilsection").show();
           $("div.pencilsection").show();
@@ -153,7 +152,7 @@
           </li>
           <li class="headerli">
             <img
-              src="images/Name.png"
+              src="images/name.png"
               alt="Shanshan Li"
               height="20"
               title="name"

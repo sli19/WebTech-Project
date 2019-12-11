@@ -17,7 +17,11 @@
         margin: 50px auto 50px auto;
         display: inline-block;
         background-color: rgb(169, 222, 249);
-        background-image: linear-gradient(to bottom right, rgb(169, 222, 249), white);
+        background-image: linear-gradient(
+          to bottom right,
+          rgb(169, 222, 249),
+          white
+        );
       }
       .container {
         width: 40%;
@@ -36,6 +40,7 @@
       }
     </style>
     <script>
+      // Change the text and style of text in response Onclick of the paragraph.
       function change() {
         let x = document.getElementById("description");
         let y = document.getElementById("about");
@@ -43,8 +48,17 @@
         x.style.fontStyle = "italic";
         x.style.fontFamily = "Courier-New";
         x.style.fontSize = "25px";
-        // x.style.color = "rgb(169, 222, 249)";
-        x.innerHTML = "Thank you for visiting my website! <br> I hope you enjoyed your stay!"
+        x.innerHTML =
+          "Thank you for visiting my website! <br> I hope you enjoyed your stay!";
+      }
+      // Change image using mouse-over and mouse-leave
+      function photo(x) {
+        let image = document.getElementById("myface");
+        if (x == "image1") {
+          image.src = "images/me.png";
+        } else if (x == "image2") {
+          image.src = "images/menice.jpg";
+        }
       }
     </script>
     <!-- There is automatic form validation why adding "required" to inputs -->
@@ -82,7 +96,7 @@
           </li>
           <li class="headerli">
             <img
-              src="images/Name.png"
+              src="images/name.png"
               alt="Shanshan Li"
               height="20"
               title="name"
@@ -107,7 +121,15 @@
     <div class="split">
       <div class="container">
         <div class="aboutme">
-          <img src="images/me.png" alt="me" height="400px" />
+          <img
+            id="myface"
+            onmouseover="photo('image1')"
+            onmouseleave="photo('image2')"
+            src="images/me.png"
+            alt="me"
+            height="400px"
+            title="me"
+          />
         </div>
       </div>
       <div class="container">
@@ -150,6 +172,8 @@
     <article>
       <h3 id="contact">Let's Connect.</h3>
     </article>
+    <!-- Use of a table and a form. Validate a form using "required" inside input tags -->
+    <!-- Feedback form -->
     <form
       name="form1"
       action="mailto:sli19@babson.edu"
